@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Aprende las etiquetas que me pasaste</title>
+
+  <!-- Uso de <style> (estaba en tu lista) -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #fbfbfd;
+      color: #111;
+    }
+    header { margin-bottom: 18px; }
+    h1 { color: #0b5ed7; margin: 0 0 6px 0; }
+    nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+    nav a {
+      display: inline-block;
+      padding: 6px 10px;
+      background: #e7f0ff;
+      color: #0b5ed7;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 1px solid #cfe0ff;
+    }
+    section {
+      background: white;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 18px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .ejemplo-codigo {
+      background: #f5f7ff;
+      border-left: 4px solid #cfe0ff;
+      padding: 10px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      margin-top: 8px;
+      border-radius: 4px;
+    }
+    .ejemplo-visual {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px dashed #ddd;
+      border-radius: 6px;
+      background: #fff;
+    }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #999; padding: 8px; text-align: left; }
+    footer { margin-top: 22px; color: #666; font-size: 14px; text-align: center; }
+    .inline-box { display:inline-block; padding:6px 10px; background:#fff0f6; border:1px solid #ffdfe8; border-radius:6px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Repaso rápido — solo las etiquetas que me diste</h1>
+  <p>Haz clic en un enlace para ir a esa sección. Cada sección tiene definición, código de ejemplo y resultado visual.</p>
+
+  <nav aria-label="Navegación de etiquetas">
+    <ul>
+      <li><a href="#p">&lt;p&gt;</a></li>
+      <li><a href="#style">&lt;style&gt; / style (atributo)</a></li>
+      <li><a href="#formato-texto">Formato de texto (b, i, u)</a></li>
+      <li><a href="#br-hr">&lt;br&gt; / &lt;hr&gt;</a></li>
+      <li><a href="#headers">Cabeceras &lt;h1&gt; - &lt;h3&gt;</a></li>
+      <li><a href="#a">&lt;a&gt; (enlaces)</a></li>
+      <li><a href="#listas">&lt;ul&gt; / &lt;ol&gt; / &lt;li&gt;</a></li>
+      <li><a href="#img">&lt;img&gt;</a></li>
+      <li><a href="#table">&lt;table&gt; (tr, th, td)</a></li>
+      <li><a href="#div">&lt;div&gt;</a></li>
+      <li><a href="#form">&lt;form&gt; (input, label, button)</a></li>
+      <li><a href="#caja">Ejemplo de caja con estilos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- P -->
+<section id="p">
+  <h2>&lt;p&gt; — párrafo</h2>
+  <p>Definición: Sirve para escribir texto en un párrafo. Es la etiqueta principal para bloques de texto.</p>
+
+  <div class="ejemplo-codigo">
+&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <p>Este es un párrafo de ejemplo.</p>
+  </div>
+</section>
+
+<!-- style / atributo style -->
+<section id="style">
+  <h2>&lt;style&gt; y atributo <code>style</code></h2>
+  <p>Definición: <code>&lt;style&gt;</code> se usa en el <code>&lt;head&gt;</code> para CSS; el atributo <code>style="…"</code> aplica estilos inline directamente en una etiqueta.</p>
+
+  <div class="ejemplo-codigo">
+&lt;p style="color: red;"&gt;Texto en rojo&lt;/p&gt;
+
+&lt;p style="font-size: 20px;"&gt;Texto más grande&lt;/p&gt;
+
+&lt;p style="text-align: center;"&gt;Texto centrado&lt;/p&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <p style="color: red;">Texto en rojo</p>
+    <p style="font-size: 20px;">Texto más grande</p>
+    <p style="text-align: center;">Texto centrado</p>
+  </div>
+</section>
+
+<!-- Formato de texto -->
+<section id="formato-texto">
+  <h2>Formato de texto — &lt;b&gt;, &lt;i&gt;, &lt;u&gt;</h2>
+  <p>Definición: etiquetas para dar formato visual al texto (negrita, cursiva, subrayado).</p>
+
+  <div class="ejemplo-codigo">
+&lt;b&gt;Texto importante&lt;/b&gt;
+
+&lt;i&gt;Texto en cursiva&lt;/i&gt;
+
+&lt;u&gt;Texto subrayado&lt;/u&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <p><b>Texto importante</b></p>
+    <p><i>Texto en cursiva</i></p>
+    <p><u>Texto subrayado</u></p>
+  </div>
+</section>
+
+<!-- br / hr -->
+<section id="br-hr">
+  <h2>&lt;br&gt; y &lt;hr&gt;</h2>
+  <p>Definición: &lt;br&gt; inserta un salto de línea; &lt;hr&gt; dibuja una línea horizontal separadora.</p>
+
+  <div class="ejemplo-codigo">
+Hola&lt;br&gt;mundo
+
+&lt;hr&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <p>Hola<br>mundo</p>
+    <hr>
+  </div>
+</section>
+
+<!-- Headers -->
+<section id="headers">
+  <h2>&lt;h1&gt; a &lt;h3&gt; — cabeceras</h2>
+  <p>Definición: se usan para títulos y subtítulos. &lt;h1&gt; es el más importante (grande), los números mayores son más pequeños.</p>
+
+  <div class="ejemplo-codigo">
+&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Título más pequeño&lt;/h3&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <h1>Título principal</h1>
+    <h2>Subtítulo</h2>
+    <h3>Título más pequeño</h3>
+  </div>
+</section>
+
+<!-- Links -->
+<section id="a">
+  <h2>&lt;a&gt; — enlaces</h2>
+  <p>Definición: crea un enlace. El atributo <code>href</code> indica la dirección. <code>target="_blank"</code> abre en nueva pestaña.</p>
+
+  <div class="ejemplo-codigo">
+&lt;a href="https://www.google.com"&gt;Ir a Google&lt;/a&gt;
+
+&lt;a href="https://www.google.com" target="_blank"&gt;Abrir en otra pestaña&lt;/a&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <p><a href="https://www.google.com" target="_blank">Ir a Google (nuevo tab)</a></p>
+  </div>
+</section>
+
+<!-- Lists -->
+<section id="listas">
+  <h2>&lt;ul&gt; / &lt;ol&gt; / &lt;li&gt; — listas</h2>
+  <p>Definición: &lt;ul&gt; crea lista con viñetas; &lt;ol&gt; lista numerada; cada elemento va en &lt;li&gt;.</p>
+
+  <div class="ejemplo-codigo">
+&lt;ul&gt;
+  &lt;li&gt;Manzana&lt;/li&gt;
+  &lt;li&gt;Plátano&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Primero&lt;/li&gt;
+  &lt;li&gt;Segundo&lt;/li&gt;
+&lt;/ol&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <ul>
+      <li>Manzana</li>
+      <li>Plátano</li>
+    </ul>
+
+    <ol>
+      <li>Primero</li>
+      <li>Segundo</li>
+    </ol>
+  </div>
+</section>
+
+<!-- IMG -->
+<section id="img">
+  <h2>&lt;img&gt; — imágenes</h2>
+  <p>Definición: muestra una imagen. <code>src</code> = ruta; <code>alt</code> = texto alternativo si no carga.</p>
+
+  <div class="ejemplo-codigo">
+&lt;img src="foto.jpg" alt="Una foto bonita" width="300"&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <!-- uso de imagen pública -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/HTML5_logo_and_wordmark.svg" alt="Logo HTML5" width="150">
+    <p><small>Ejemplo: imagen desde internet</small></p>
+  </div>
+</section>
+
+<!-- TABLE -->
+<section id="table">
+  <h2>&lt;table&gt; — tablas (tr, th, td)</h2>
+  <p>Definición: estructura en filas y columnas. &lt;tr&gt; = fila, &lt;th&gt; = cabecera, &lt;td&gt; = celda.</p>
+
+  <div class="ejemplo-codigo">
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nombre&lt;/th&gt;
+    &lt;th&gt;Edad&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Juan&lt;/td&gt;
+    &lt;td&gt;20&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <table>
+      <tr><th>Nombre</th><th>Edad</th></tr>
+      <tr><td>Juan</td><td>20</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- DIV -->
+<section id="div">
+  <h2>&lt;div&gt; — divisiones / contenedores</h2>
+  <p>Definición: caja genérica para agrupar contenido. Muy útil para aplicar estilos y organizar la página.</p>
+
+  <div class="ejemplo-codigo">
+&lt;div style="background-color: lightblue; padding: 10px;"&gt;
+  &lt;h2&gt;Título dentro del div&lt;/h2&gt;
+  &lt;p&gt;Texto dentro del div.&lt;/p&gt;
+&lt;/div&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <div style="background-color: lightblue; padding: 10px;">
+      <h2>Título dentro del div</h2>
+      <p>Texto dentro del div.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="form">
+  <h2>&lt;form&gt; — formularios (input, label, button)</h2>
+  <p>Definición: contenedor para campos que envían datos. Incluye &lt;input&gt;, &lt;label&gt; y &lt;button&gt;.</p>
+
+  <div class="ejemplo-codigo">
+&lt;form&gt;
+  &lt;label&gt;Nombre:&lt;/label&gt;
+  &lt;input type="text" name="nombre"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;Contraseña:&lt;/label&gt;
+  &lt;input type="password" name="clave"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;input type="checkbox"&gt; Acepto los términos&lt;br&gt;&lt;br&gt;
+
+  &lt;button&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <form action="#" method="post">
+      <label>Nombre:</label>
+      <input type="text" name="nombre"><br><br>
+
+      <label>Contraseña:</label>
+      <input type="password" name="clave"><br><br>
+
+      <input type="checkbox"> Acepto los términos<br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<!-- Caja ejemplo -->
+<section id="caja">
+  <h2>Ejemplo: caja con estilos (div con ancho, alto, fondo)</h2>
+
+  <div class="ejemplo-codigo">
+&lt;div style="width: 200px; height: 100px; background-color: pink; border: 2px solid black;"&gt;
+  Caja de ejemplo
+&lt;/div&gt;
+  </div>
+
+  <div class="ejemplo-visual">
+    <div style="width: 200px; height: 100px; background-color: pink; border: 2px solid black; display:flex; align-items:center; justify-content:center;">
+      Caja de ejemplo
+    </div>
+  </div>
+</section>
+
+
+
+</body>
+</html>
